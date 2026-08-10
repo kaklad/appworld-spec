@@ -1,0 +1,291 @@
+{
+  "task_id": "37a8675_1",
+  "task_error": null,
+  "call_count": 11,
+  "calls": [
+    {
+      "span_id": 0,
+      "task_id": "37a8675_1",
+      "tool": "supervisor.show_profile",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 1,
+      "task_id": "37a8675_1",
+      "tool": "supervisor.show_account_passwords",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 2,
+      "task_id": "37a8675_1",
+      "tool": "phone.login",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "phone"
+      ],
+      "write_dbs": [],
+      "other_effects": [
+        "rng"
+      ],
+      "sql_counts": [
+        {
+          "db": "phone",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 3,
+      "task_id": "37a8675_1",
+      "tool": "phone.search_contacts",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "phone"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "phone",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 4,
+      "task_id": "37a8675_1",
+      "tool": "venmo.login",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "venmo"
+      ],
+      "write_dbs": [],
+      "other_effects": [
+        "rng"
+      ],
+      "sql_counts": [
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 5,
+      "task_id": "37a8675_1",
+      "tool": "venmo.show_payment_cards",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "venmo"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 6,
+      "task_id": "37a8675_1",
+      "tool": "venmo.create_transaction",
+      "status_code": 422,
+      "success": false,
+      "error": null,
+      "read_dbs": [
+        "admin",
+        "venmo"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "admin",
+          "operation": "SELECT",
+          "count": 2
+        },
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 7,
+      "task_id": "37a8675_1",
+      "tool": "venmo.create_transaction",
+      "status_code": 422,
+      "success": false,
+      "error": null,
+      "read_dbs": [
+        "admin",
+        "venmo"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "admin",
+          "operation": "SELECT",
+          "count": 2
+        },
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 8,
+      "task_id": "37a8675_1",
+      "tool": "venmo.create_transaction",
+      "status_code": 422,
+      "success": false,
+      "error": null,
+      "read_dbs": [
+        "admin",
+        "venmo"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "admin",
+          "operation": "SELECT",
+          "count": 2
+        },
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 9,
+      "task_id": "37a8675_1",
+      "tool": "venmo.create_transaction",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "admin",
+        "venmo"
+      ],
+      "write_dbs": [
+        "admin",
+        "venmo"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "admin",
+          "operation": "SELECT",
+          "count": 6
+        },
+        {
+          "db": "admin",
+          "operation": "UPDATE",
+          "count": 1
+        },
+        {
+          "db": "venmo",
+          "operation": "INSERT",
+          "count": 3
+        },
+        {
+          "db": "venmo",
+          "operation": "SELECT",
+          "count": 14
+        },
+        {
+          "db": "venmo",
+          "operation": "UPDATE",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 10,
+      "task_id": "37a8675_1",
+      "tool": "supervisor.complete_task",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [
+        "supervisor"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 3
+        },
+        {
+          "db": "supervisor",
+          "operation": "UPDATE",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    }
+  ]
+}

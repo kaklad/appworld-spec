@@ -1,0 +1,170 @@
+{
+  "task_id": "cf6abd2_2",
+  "task_error": null,
+  "call_count": 7,
+  "calls": [
+    {
+      "span_id": 0,
+      "task_id": "cf6abd2_2",
+      "tool": "supervisor.show_profile",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 1,
+      "task_id": "cf6abd2_2",
+      "tool": "supervisor.show_account_passwords",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 2,
+      "task_id": "cf6abd2_2",
+      "tool": "simple_note.login",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "simple_note"
+      ],
+      "write_dbs": [],
+      "other_effects": [
+        "rng"
+      ],
+      "sql_counts": [
+        {
+          "db": "simple_note",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 3,
+      "task_id": "cf6abd2_2",
+      "tool": "simple_note.search_notes",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "simple_note"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "simple_note",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 4,
+      "task_id": "cf6abd2_2",
+      "tool": "simple_note.show_note",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "simple_note"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "simple_note",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 5,
+      "task_id": "cf6abd2_2",
+      "tool": "simple_note.update_note",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "simple_note"
+      ],
+      "write_dbs": [
+        "simple_note"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "simple_note",
+          "operation": "SELECT",
+          "count": 5
+        },
+        {
+          "db": "simple_note",
+          "operation": "UPDATE",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 6,
+      "task_id": "cf6abd2_2",
+      "tool": "supervisor.complete_task",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [
+        "supervisor"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 3
+        },
+        {
+          "db": "supervisor",
+          "operation": "UPDATE",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    }
+  ]
+}

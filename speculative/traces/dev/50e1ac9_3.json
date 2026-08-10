@@ -1,0 +1,2935 @@
+{
+  "task_id": "50e1ac9_3",
+  "task_error": null,
+  "call_count": 139,
+  "calls": [
+    {
+      "span_id": 0,
+      "task_id": "50e1ac9_3",
+      "tool": "supervisor.show_profile",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 1,
+      "task_id": "50e1ac9_3",
+      "tool": "supervisor.show_account_passwords",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 2,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.login",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [
+        "rng"
+      ],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 3,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 55
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 4,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 55
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 5,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 53
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 6,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 55
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 7,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 8,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 9,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 10,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 11,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 12,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 43
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 13,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 14,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 15,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 16,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 17,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 18,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 19,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 20,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 21,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 22,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 23,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 24,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 25,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 26,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 27,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 28,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 29,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 30,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 31,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 32,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 33,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 32
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 34,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 23
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 35,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 36,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 37,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 38,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 39,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 40,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 41,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 42,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 43,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 11
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 44,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 45,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 46,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 47,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 48,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 9
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 49,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 50,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 51,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 52,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 9
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 53,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 54,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 55,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 56,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 17
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 57,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 58,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 59,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 60,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 61,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 62,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 63,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 64,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 11
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 65,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 66,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 67,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 68,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 69,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 9
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 70,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 71,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 72,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 73,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_album",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 11
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 74,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 75,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 76,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 77,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 78,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 12
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 79,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 80,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 81,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 82,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 83,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 84,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 85,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 86,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 87,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist_library",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 2
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 88,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 25
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 89,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 90,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 91,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 92,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 93,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 94,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 95,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 96,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 97,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 18
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 98,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 99,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 100,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 101,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 102,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 103,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 104,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 22
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 105,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 6
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 106,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 107,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 108,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 109,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 110,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 111,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 112,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 113,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 15
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 114,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 115,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 116,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 117,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 118,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 119,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 25
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 120,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 121,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 5
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 122,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 123,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 124,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 125,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 126,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 127,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 128,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 129,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_playlist",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 23
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 130,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 131,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 4
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 132,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 133,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 134,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 135,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 136,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 137,
+      "task_id": "50e1ac9_3",
+      "tool": "spotify.show_song",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 3
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 138,
+      "task_id": "50e1ac9_3",
+      "tool": "supervisor.complete_task",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [
+        "supervisor"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 3
+        },
+        {
+          "db": "supervisor",
+          "operation": "UPDATE",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    }
+  ]
+}

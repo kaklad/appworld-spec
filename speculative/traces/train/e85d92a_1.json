@@ -1,0 +1,119 @@
+{
+  "task_id": "e85d92a_1",
+  "task_error": null,
+  "call_count": 5,
+  "calls": [
+    {
+      "span_id": 0,
+      "task_id": "e85d92a_1",
+      "tool": "supervisor.show_profile",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 1,
+      "task_id": "e85d92a_1",
+      "tool": "supervisor.show_account_passwords",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 2,
+      "task_id": "e85d92a_1",
+      "tool": "spotify.search_artists",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 7
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 3,
+      "task_id": "e85d92a_1",
+      "tool": "spotify.search_songs",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "spotify"
+      ],
+      "write_dbs": [],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "spotify",
+          "operation": "SELECT",
+          "count": 7
+        }
+      ],
+      "unknown_operations": []
+    },
+    {
+      "span_id": 4,
+      "task_id": "e85d92a_1",
+      "tool": "supervisor.complete_task",
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "read_dbs": [
+        "supervisor"
+      ],
+      "write_dbs": [
+        "supervisor"
+      ],
+      "other_effects": [],
+      "sql_counts": [
+        {
+          "db": "supervisor",
+          "operation": "SELECT",
+          "count": 3
+        },
+        {
+          "db": "supervisor",
+          "operation": "UPDATE",
+          "count": 1
+        }
+      ],
+      "unknown_operations": []
+    }
+  ]
+}
