@@ -1,0 +1,47 @@
+console log: /Users/kimjinhyeong/lab/appworld/log/venmo-k1.log
+task: Send a reminder on Venmo for all my payment requests to my roommates which have not been approved or denied for 50 or more days.
+API predictor catalog: 60
+trace: /Users/kimjinhyeong/lab/appworld/outputs/speculative/venmo-k1.jsonl
+starting Terra and Luna (timeout=300s each)...
+▶ api-predictor  gpt-5.6-luna  catalog=60 timeout=300s
+✓ api-predictor  gpt-5.6-luna  3.30s  tokens=1590→39
+{
+  "selected_tools": [
+    "supervisor.show_account_passwords",
+    "supervisor.complete_task",
+    "venmo.login",
+    "venmo.show_sent_payment_requests",
+    "venmo.remind_payment_request"
+  ]
+}
+▶ actor  gpt-5.6-terra  context=root timeout=300s
+▶ speculator  gpt-5.6-luna  context=root timeout=300s
+✓ speculator  gpt-5.6-luna  1.40s  tokens=1703→34
+{
+  "candidates": [
+    {
+      "app_name": "supervisor",
+      "api_name": "show_account_passwords",
+      "arguments_json": "{}"
+    }
+  ]
+}
+✓ actor  gpt-5.6-terra  3.27s  tokens=1636→188
+{
+  "app_name": "supervisor",
+  "api_name": "show_account_passwords",
+  "arguments_json": "{}"
+}
+selected tools: 5
+actor: supervisor.show_account_passwords:{}
+candidate[candidate-0]: supervisor.show_account_passwords
+branch[candidate-0]: status=200 success=True snapshot_apps=[]
+▶ actor-continuation[candidate-0]  gpt-5.6-terra  context=9d00d64b866b timeout=300s
+✓ actor-continuation[candidate-0]  gpt-5.6-terra  2.33s  tokens=1883→99
+{
+  "app_name": "supervisor",
+  "api_name": "show_account_passwords",
+  "arguments_json": "{}"
+}
+result: HIT branch=candidate-0
+next_action: supervisor.show_account_passwords:{}
