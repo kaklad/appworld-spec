@@ -123,12 +123,13 @@ continuations = asyncio.run(
 Tests inject a fake Responses client and therefore do not need an API key or
 network access.
 
-Run one live speculative round with:
+Run a live speculative task with:
 
 ```bash
 python scripts/run_speculative_demo.py \
   --task-id 4fab96f_3 \
   -k 3 \
+  --max-rounds 20 \
   --llm-timeout-seconds 300 \
   --max-predicted-tools 20 \
   --log-name venmo-demo \
@@ -140,6 +141,12 @@ python scripts/run_speculative_demo.py \
 Terminal output and exceptions are mirrored to `log/venmo-demo.log`. ANSI
 color codes are removed from the file; the structured JSONL trace remains a
 separate artifact for programmatic analysis.
+
+Despite its historical `demo` name, the runner now continues across rounds
+until `supervisor.complete_task` is promoted or `--max-rounds` is reached. It
+stores observed passwords and login tokens in a branch-local credential vault;
+the model sees only logical credential references, which are resolved to real
+values immediately before tool execution.
 
 The runner suppresses Python warnings by default. Exceptions and trace failure
 events are still reported. It temporarily releases AppWorld's frozen task clock

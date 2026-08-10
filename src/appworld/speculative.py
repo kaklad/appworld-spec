@@ -41,9 +41,32 @@ class CredentialRef:
 
     app_name: str
     principal: str = "current_user"
+    field: str = "access_token"
 
     def to_json(self) -> dict[str, str]:
-        return {"$credential": self.app_name, "$principal": self.principal}
+        return {
+            "$credential": self.app_name,
+            "$principal": self.principal,
+            "$field": self.field,
+        }
+
+    @property
+    def key(self) -> str:
+        return f"{self.app_name}:{self.principal}:{self.field}"
+
+
+def _restore_credential_refs(value: Any) -> Any:
+    if isinstance(value, list):
+        return [_restore_credential_refs(item) for item in value]
+    if isinstance(value, dict):
+        if "$credential" in value:
+            return CredentialRef(
+                app_name=str(value["$credential"]),
+                principal=str(value.get("$principal", "current_user")),
+                field=str(value.get("$field", "access_token")),
+            )
+        return {key: _restore_credential_refs(item) for key, item in value.items()}
+    return value
 
 
 def _normalize_json_value(value: Any, declared_type: str | None = None) -> Any:
@@ -153,12 +176,21 @@ class CanonicalToolCall:
     def digest(self) -> str:
         return hashlib.sha256(self.key.encode()).hexdigest()
 
+    def to_action(self, branch_id: str = "") -> "ToolAction":
+        return ToolAction(
+            self.app_name,
+            self.api_name,
+            _restore_credential_refs(self.arguments),
+            branch_id,
+        )
+
 
 @dataclass
 class WorkingMemory:
     """Compact observation-derived state supplied to the actor instead of raw history."""
 
     credentials: dict[str, CredentialRef | str] = field(default_factory=dict)
+    credential_values: dict[str, str] = field(default_factory=dict, repr=False)
     entities: dict[str, Any] = field(default_factory=dict)
     constraints: dict[str, Any] = field(default_factory=dict)
     pagination: dict[str, Any] = field(default_factory=dict)
@@ -179,11 +211,48 @@ class WorkingMemory:
     ) -> None:
         if succeeded:
             self.completed_action_keys.append(action.key)
+            self._record_credentials(action, observation)
         else:
             self.recent_errors.append(
                 {"action": action.key, "observation": _normalize_json_value(observation)}
             )
             self.recent_errors = self.recent_errors[-max_errors:]
+
+    def seed_usernames(self, app_names: list[str] | tuple[str, ...], username: str) -> None:
+        for app_name in app_names:
+            reference = CredentialRef(app_name, field="username")
+            self.credentials[f"{app_name}.username"] = reference
+            self.credential_values[reference.key] = username
+
+    def _record_credentials(self, action: CanonicalToolCall, observation: Any) -> None:
+        if action.app_name == "supervisor" and action.api_name == "show_account_passwords":
+            if isinstance(observation, list):
+                for item in observation:
+                    if not isinstance(item, dict):
+                        continue
+                    app_name = item.get("account_name")
+                    password = item.get("password")
+                    if isinstance(app_name, str) and isinstance(password, str):
+                        reference = CredentialRef(app_name, field="password")
+                        self.credentials[f"{app_name}.password"] = reference
+                        self.credential_values[reference.key] = password
+        if action.api_name == "login" and isinstance(observation, dict):
+            access_token = observation.get("access_token")
+            if isinstance(access_token, str):
+                reference = CredentialRef(action.app_name, field="access_token")
+                self.credentials[f"{action.app_name}.access_token"] = reference
+                self.credential_values[reference.key] = access_token
+
+    def resolve_credentials(self, value: Any) -> Any:
+        if isinstance(value, CredentialRef):
+            if value.key not in self.credential_values:
+                raise KeyError(f"Credential {value.key!r} is not available in working memory.")
+            return self.credential_values[value.key]
+        if isinstance(value, list):
+            return [self.resolve_credentials(item) for item in value]
+        if isinstance(value, dict):
+            return {key: self.resolve_credentials(item) for key, item in value.items()}
+        return value
 
     def to_prompt_dict(self) -> dict[str, Any]:
         return {
@@ -519,7 +588,11 @@ class Speculator:
         self._round = 0
         self.trace = trace
 
-    def speculate(self, actions: list[ToolAction]) -> list[BranchResult]:
+    def speculate(
+        self,
+        actions: list[ToolAction],
+        working_memory: WorkingMemory | None = None,
+    ) -> list[BranchResult]:
         if not actions:
             return []
         self._round += 1
@@ -566,12 +639,15 @@ class Speculator:
                 status_code: int | None = None
                 error: str | None = None
                 try:
+                    arguments = copy.deepcopy(action.arguments)
+                    if working_memory is not None:
+                        arguments = working_memory.resolve_credentials(arguments)
                     response = self.world.requester._request(
                         _app_name=action.app_name,
                         _api_name=action.api_name,
                         raise_on_failure=False,
                         track=False,
-                        **copy.deepcopy(action.arguments),
+                        **arguments,
                     )
                     status_code = response.status_code
                     observation = self.world.requester.response_to_json(response)

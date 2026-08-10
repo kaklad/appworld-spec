@@ -104,6 +104,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--task-id", default="4fab96f_3")
     parser.add_argument("-k", type=int, default=3)
+    parser.add_argument("--max-rounds", type=int, default=20)
     parser.add_argument(
         "--seed-app",
         action="append",
@@ -153,6 +154,8 @@ async def run(args: argparse.Namespace) -> int:
         raise RuntimeError("OPENAI_API_KEY is not set in this shell.")
     if args.k < 1:
         raise ValueError("k must be at least 1.")
+    if args.max_rounds < 1:
+        raise ValueError("max_rounds must be at least 1.")
 
     trace_path = args.trace or Path("outputs/speculative") / f"{args.task_id}.jsonl"
     trace = TraceRecorder(trace_path, run_id=args.task_id)
@@ -161,6 +164,7 @@ async def run(args: argparse.Namespace) -> int:
     # reads metadata and API docs but does not open the mutable execution world.
     task = Task.load(args.task_id, load_ground_truth=False)
     context = ActorContext(task_instruction=task.instruction, environment_state_id="S0")
+    context.working_memory.seed_usernames(task.allowed_apps, task.supervisor.email)
     selector = ManifestToolSelector()
     if args.seed_app:
         context = selector.populate(context, seed_apps=set(args.seed_app))
@@ -195,29 +199,71 @@ async def run(args: argparse.Namespace) -> int:
 
     with AppWorld(task_id=args.task_id, experiment_name=args.experiment_name) as world:
         speculator = Speculator(world, trace=trace)
-
-        branch_results = speculator.speculate(candidates)
-        for result in branch_results:
-            print(
-                f"branch[{result.action.branch_id}]: status={result.status_code} "
-                f"success={result.succeeded} snapshot_apps={list(result.snapshot.app_names)}"
+        for round_number in range(1, args.max_rounds + 1):
+            print(f"\n{'─' * 20} round {round_number}/{args.max_rounds} {'─' * 20}")
+            branch_results = speculator.speculate(
+                candidates,
+                working_memory=context.working_memory,
             )
-            if result.error:
-                print(f"  error: {result.error}")
+            for result in branch_results:
+                print(
+                    f"branch[{result.action.branch_id}]: status={result.status_code} "
+                    f"success={result.succeeded} "
+                    f"snapshot_apps={list(result.snapshot.app_names)}"
+                )
+                if result.error:
+                    print(f"  error: {result.error}")
 
-        continuations = await run_llm_with_real_clock(
-            world,
-            actors.precompute_continuations(context, branch_results),
-        )
-        hit = actors.find_hit(actor_action, continuations, context)
-        if hit is None:
-            print("result: MISS (the authoritative action was not promoted)")
-            return 2
+            continuations = await run_llm_with_real_clock(
+                world,
+                actors.precompute_continuations(context, branch_results),
+            )
+            hit = actors.find_hit(actor_action, continuations, context)
+            if hit is not None:
+                speculator.promote(hit.branch_id)
+                context = hit.next_actor_context
+                next_action = hit.precomputed_next_action
+                print(f"result: HIT branch={hit.branch_id}")
+            else:
+                print("result: MISS; executing authoritative actor action")
+                miss_branch_id = f"actor-miss-{round_number}"
+                miss_result = speculator.speculate(
+                    [actor_action.to_action(miss_branch_id)],
+                    working_memory=context.working_memory,
+                )[0]
+                if not miss_result.succeeded:
+                    raise RuntimeError(
+                        f"Authoritative action failed: {miss_result.error or miss_result.observation}"
+                    )
+                speculator.promote(miss_branch_id)
+                context = context.after_tool(
+                    miss_result.canonical_action,
+                    miss_result.observation,
+                    True,
+                    miss_result.snapshot.snapshot_id,
+                )
+                next_action = None
 
-        speculator.promote(hit.branch_id)
-        print(f"result: HIT branch={hit.branch_id}")
-        print(f"next_action: {hit.precomputed_next_action.key}")
-        return 0
+            if world.task_completed():
+                print(f"task completed successfully in {round_number} rounds")
+                return 0
+
+            if next_action is None:
+                next_action = await run_llm_with_real_clock(
+                    world,
+                    actors.choose_action(context, call_name="actor-after-miss"),
+                )
+            actor_action = next_action
+            print(f"next actor action: {actor_action.key}")
+            candidates = await run_llm_with_real_clock(
+                world,
+                actors.propose_candidates(context, args.k),
+            )
+            for candidate in candidates:
+                print(f"candidate[{candidate.branch_id}]: {candidate.tool_name}")
+
+        print(f"task incomplete after max_rounds={args.max_rounds}")
+        return 2
 
 
 def main() -> None:

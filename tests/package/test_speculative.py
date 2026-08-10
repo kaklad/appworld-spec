@@ -53,8 +53,53 @@ def test_canonical_tool_call_normalizes_defaults_types_and_credentials() -> None
     assert implicit_defaults == explicit_defaults
     assert implicit_defaults.arguments["access_token"] == {
         "$credential": "venmo",
+        "$field": "access_token",
         "$principal": "current_user",
     }
+
+
+def test_working_memory_records_and_resolves_login_credentials() -> None:
+    with AppWorld(task_id=TASK_ID, experiment_name="test_credential_memory") as world:
+        memory = WorkingMemory()
+        memory.seed_usernames(["venmo"], world.task.supervisor.email)
+        context = ActorContext(
+            task_instruction=world.task.instruction,
+            working_memory=memory,
+            environment_state_id="S0",
+        )
+        speculator = Speculator(world)
+
+        password_result = speculator.speculate(
+            [ToolAction("supervisor", "show_account_passwords", branch_id="passwords")],
+            working_memory=memory,
+        )[0]
+        password_context = BranchContinuation.from_result(
+            password_result, context
+        ).next_actor_context
+        assert "venmo.password" in password_context.working_memory.credentials
+
+        login_result = speculator.speculate(
+            [
+                ToolAction(
+                    "venmo",
+                    "login",
+                    {
+                        "username": CredentialRef("venmo", field="username"),
+                        "password": CredentialRef("venmo", field="password"),
+                    },
+                    "login",
+                )
+            ],
+            working_memory=password_context.working_memory,
+        )[0]
+        assert login_result.succeeded
+        login_context = BranchContinuation.from_result(
+            login_result, password_context
+        ).next_actor_context
+        assert "venmo.access_token" in login_context.working_memory.credentials
+        assert login_context.working_memory.resolve_credentials(
+            CredentialRef("venmo")
+        ).count(".") == 2
 
 
 def test_actor_context_branches_without_mutating_parent_memory() -> None:

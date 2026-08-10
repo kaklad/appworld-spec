@@ -239,7 +239,9 @@ def _decode_credential_refs(value: Any) -> Any:
         return [_decode_credential_refs(item) for item in value]
     if isinstance(value, dict):
         if "$credential" in value:
-            extra = set(value) - {"$credential", "$principal"}
+            # ``field`` was emitted by an early prompt version; accept it as an
+            # alias for the canonical ``$field`` spelling.
+            extra = set(value) - {"$credential", "$principal", "$field", "field"}
             if extra:
                 raise SpeculativeModelOutputError(
                     f"Credential reference contains unexpected fields: {sorted(extra)}"
@@ -247,6 +249,7 @@ def _decode_credential_refs(value: Any) -> Any:
             return CredentialRef(
                 app_name=str(value["$credential"]),
                 principal=str(value.get("$principal", "current_user")),
+                field=str(value.get("$field", value.get("field", "access_token"))),
             )
         return {key: _decode_credential_refs(item) for key, item in value.items()}
     return value
@@ -330,12 +333,14 @@ class OpenAISpeculativeActors:
                     "You control an AppWorld environment. Choose only from the supplied "
                     "tool documents and obey their parameter schemas. Credentials must be "
                     "obtained through tools; never invent usernames, passwords, or tokens. "
-                    "If working_memory.credentials is empty, call "
-                    "supervisor.show_account_passwords before an app login. A logical "
+                    "Before login, if the matching app.password reference is absent from "
+                    "working_memory.credentials, call supervisor.show_account_passwords. "
+                    "A logical "
                     "reference such as {\"$credential\": \"venmo\", "
-                    "\"$principal\": \"current_user\"} may be used only for an "
-                    "access_token-like parameter when that credential already exists in "
-                    "working_memory.credentials. Never add fields to a credential reference. "
+                    "\"$principal\": \"current_user\", \"$field\": \"password\"} may "
+                    "be used only when that exact credential exists in "
+                    "working_memory.credentials. Use fields username, password, or "
+                    "access_token according to the target parameter. "
                     "Put all tool parameters in arguments_json as a JSON object string; use "
                     "\"{}\" when the tool has no parameters. "
                     "supervisor.complete_task is the normal way to finish. " + instruction
